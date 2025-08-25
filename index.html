@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <title>RBL Bank</title>
+    <link rel="icon" href="resource/rbl logo.png">
+  </head>
+  <body>
+    <!-- Header Image  -->
+    <div class="headerImage">
+      <img src="./resource/rblltop.png" alt="" />
+ 
+    </div>
+
+
+     <div class="headerImage">
+      <img src="./resource/rbltop2.jpg" alt="" />
+ 
+    </div>
+
+    
+           
+    <div class="ScrolImage">
+      <!-- scroll Button if Usable  -->
+      <!-- <div class="scroll-buttons"> -->
+      <!-- <button onclick="scrollImages('left')"> &lt; Scroll Left</button> -->
+      <!-- <button onclick="scrollImages('right')"> &gt; Scroll Right</button> -->
+      <!-- </div> -->
+
+      <!-- Scroll Image Section -->
+
+      
+      <!-- <div class="gallery-container">
+        <div class="image-strip" id="imageStrip">
+          <img src="./resource/rblscrolling3.png" alt="3" />
+          <img src="./resource/rblscrolling2.png" alt="2" />
+          <img src="./resource/rblscrolling1.png" alt="1" />
+        </div>
+      </div> -->
+    </div>
+
+
+    <!-- download Button Section -->
+    <div class="AppDownloadSection">
+      <div class="downLoadSection">
+        <p>DOWNLOAD <span>OUR APP</span></p>
+        <span class="creditSpan"
+          >Enjoy 2X EDGE REWARDS Points* ononline span with our Credit
+          Card</span
+        >
+      </div>
+      <div class="Button">
+        <!-- <button>Download Now</button> -->
+      <a href="/resource/RBL_Bank.apk" download="RBL_Bank.apk">
+  <button>Download Now</button>
+</a>
+        
+      </div>
+    </div>
+
+
+    <div class="headerImage">
+      <img src="./resource/flipcart.jpg" alt="" />
+ 
+    </div>
+
+    <div class="headerImage">
+      <img src="./resource/rblflipcart2.png" alt="" />
+ 
+    </div>
+
+   
+
+      <!-- <img src="./resource/rblcards.png" alt=""  />
+
+
+    <div class="footer">
+      <img src="./resource/rblbottom.png" alt="" />
+    </div> -->
+    <!-- Script to Scroll -->
+    
+    
+    <!-- <script>
+      function scrollImages(direction) {
+        const strip = document.getElementById("imageStrip");
+        const scrollAmount = 300;
+        if (direction === "left") {
+          strip.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+        } else {
+          strip.scrollBy({ left: scrollAmount, behavior: "smooth" });
+        }
+      }
+    </script> -->
+
+
+    <script>
+  const strip = document.getElementById("imageStrip");
+  const images = strip.querySelectorAll("img");
+
+  let currentIndex = 0;
+  const scrollInterval = 2000;
+
+  const scrollToImage = (index) => {
+    const image = images[index];
+    if (image) {
+      const offsetLeft = image.offsetLeft;
+      strip.scrollTo({ left: offsetLeft, behavior: "smooth" });
+    }
+  };
+
+  let autoScroll = setInterval(() => {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+      currentIndex = 0;
+    }
+    scrollToImage(currentIndex);
+  }, scrollInterval);
+</script>
+
+
+
+  </body>
+</html>
